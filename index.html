@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Coffee Delivery</title>
+  <script src="./vue.min.js"></script>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <header class="navbar">
+      <div class="logo">
+        <img src="./assets/icon/Logo.svg" alt="logo Coffee Delivery">
+      </div>
+      <div class="actions">
+        <div class="location">
+          <img src="./assets/icon/Pin.svg" alt="">
+          <h6>Porto Alegre, RS</h6>
+        </div>
+        <div class="cart">
+          <img src="./assets/icon/Cart.svg" alt=""> <!-- {{carrinhoTotal}} -->
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="intro">
+        <div class="title">
+          <h1 class="title_principal">Encontre o café perfeito para qualquer hora do dia</h1>
+          <h2 class="subtitle">Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora.</h2>
+          <div class="items">
+            <div class="first_item">
+              <div class="item1">
+                <img class="item_icon" src="./assets/icon/Cart_item.svg" alt="">
+                <h4>Compra simples e segura</h4>
+              </div>
+              <div class="item2">
+                <img class="item_icon" src="./assets/icon/Box_item.svg" alt="">
+                <h4>Embalagem mantém o café intacto</h4>
+              </div>
+            </div>
+
+            <div class="second_item">
+              <div class="item3">
+                <img class="item_icon" src="./assets/icon/Time_item.svg" alt="">
+                <h4>Entrega rápida e rastreada</h4>
+              </div>
+              <div class="item4">
+                <img class="item_icon" src="./assets/icon/Chicara_item.svg" alt="">
+                <h4>O café chega fresquinho até você</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="imagem" src="./assets/img/Imagem.jpg" alt="">
+
+      </div>
+    </main>
+
+    <div class="product_title">
+      <h1>Nossos cafés</h1>
+    </div>
+
+    <section class="produtos">
+      <div v-for="produto in produtos" :key="produto.id" class="produto">
+        <div class="produto_img">
+          <img :src="produto.img" :alt="produtos" />
+        </div>
+        <div>
+          <span class="produto_tipo">{{produto.tipo1}}</span>
+          <span class="produto_tipo">{{produto.tipo2}}</span>
+        </div>
+        <h2 class="produto_titulo">{{produto.titulo}}</h2>
+        <div class="produto_info">
+          <span class="produto_descricao">{{produto.descricao}}</span>
+        </div>
+        <div class="buy">
+          <span class="produto_preco">{{produto.preco}}
+          </span>
+          <div class="counter">
+            <button type="submit"><img src="./assets/icon/-.svg" alt=""></button>
+            <button @click="adicionaItem" type="submit"><img src="./assets/icon/+.svg" alt=""></button>
+          </div>
+          <div class="cart_button">
+            <img src="./assets/icon/cart_Button.svg" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+
+  <script src="./app.js"></script>
+</body>
+
+</html>

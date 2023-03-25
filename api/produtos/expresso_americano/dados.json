@@ -1,0 +1,8 @@
+{
+  "id": "expresso_americano",
+  "tipo1": "Tradicional",
+  "titulo": "Expresso Americano",
+  "descricao": "Expresso diluído, menos intenso que o tradicional",
+  "preco": "9,90",
+  "img": "americano"
+}

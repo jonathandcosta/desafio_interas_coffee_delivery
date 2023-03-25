@@ -1,0 +1,9 @@
+{
+  "id": "expresso_gelado",
+  "tipo1": "Tradicional",
+  "tipo2": "Gelado",
+  "titulo": "Expresso Gelado",
+  "descricao": "Bebida preparada com café expresso e cubos de gelo",
+  "preco": "9,90",
+  "img": "gelado"
+}
